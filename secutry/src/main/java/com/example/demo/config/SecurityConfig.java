@@ -44,7 +44,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/login?error")
                 .permitAll()
                 .and()
-                .logout().permitAll();
+                .logout().permitAll()
+                .and()
+                .rememberMe()
+//                .rememberMeParameter("remember-me")   用于设置表单中复选框名，默认为：remember-me
+                .key("INTERNAL_SECRET_KEY");
     }
 
 }

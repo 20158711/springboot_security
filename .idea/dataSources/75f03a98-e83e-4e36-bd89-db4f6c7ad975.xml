@@ -930,32 +930,22 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="235" parent="11" name="role">
+    <table id="235" parent="11" name="hibernate_sequence"/>
+    <table id="236" parent="11" name="permission"/>
+    <table id="237" parent="11" name="role">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="236" parent="11" name="user">
+    <table id="238" parent="11" name="user">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="237" parent="11" name="user_roles">
+    <table id="239" parent="11" name="user_roles">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="238" parent="235" name="id">
+    <column id="240" parent="235" name="next_val">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="235" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="240" parent="235" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
     <column id="241" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -963,43 +953,92 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="236" name="password">
+    <column id="242" parent="236" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="236" name="username">
+    <column id="243" parent="236" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="244" parent="236" name="PRIMARY">
+    <column id="244" parent="236" name="pid">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="236" name="url">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="246" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="237" name="user_id">
+    <column id="247" parent="237" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="237" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="249" parent="237" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="250" parent="238" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="238" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="238" name="username">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="253" parent="238" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="254" parent="239" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="237" name="roles_id">
+    <column id="255" parent="239" name="roles_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="247" parent="237" name="UK_amwlmdeik2qdnksxgd566knop">
+    <index id="256" parent="239" name="UK_amwlmdeik2qdnksxgd566knop">
       <ColNames>roles_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="248" parent="237" name="FK55itppkw3i07do3h7qoclqd4k">
+    <index id="257" parent="239" name="FK55itppkw3i07do3h7qoclqd4k">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="249" parent="237" name="UK_amwlmdeik2qdnksxgd566knop">
+    <key id="258" parent="239" name="UK_amwlmdeik2qdnksxgd566knop">
       <ColNames>roles_id</ColNames>
       <UnderlyingIndexName>UK_amwlmdeik2qdnksxgd566knop</UnderlyingIndexName>
     </key>
